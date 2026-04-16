@@ -18,7 +18,7 @@ export default function CompanyGrid({ companies, criteria, results, selectedCrit
     <div style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 40px 60px' }}>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, marginBottom: 24, borderBottom: '1px solid #c8bfa8', paddingBottom: 12 }}>
         <h2 style={{ fontFamily: 'Playfair Display', fontSize: 26, fontWeight: 800, color: '#1a1a1a' }}>
-          {noSelection ? 'All Companies' : 'Matched Activities'}
+          {noSelection ? 'All Activities' : 'Matched Activities'}
         </h2>
         <span style={{ fontFamily: 'IBM Plex Mono', fontSize: 11, color: '#888', letterSpacing: '0.1em', fontWeight: 600 }}>
           {displayList.length} {noSelection ? 'AVAILABLE' : 'RESULTS'}
