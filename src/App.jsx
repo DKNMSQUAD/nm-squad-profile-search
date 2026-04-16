@@ -44,7 +44,7 @@ export default function App() {
       <CompanyGrid companies={companies} criteria={criteria} results={results} selectedCriteria={selected} />
       <footer style={{ borderTop: '1px solid #c8bfa8', padding: '16px 40px', background: '#e8e1d0' }}>
         <span style={{ fontFamily: 'IBM Plex Mono', fontSize: 10, color: '#aaa', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-          NM Squad Profile Building Search &middot; Counselor Neeraj Mandhana
+          NM Squad Profile Builder &middot; Counselor Neeraj Mandhana
         </span>
       </footer>
     </div>

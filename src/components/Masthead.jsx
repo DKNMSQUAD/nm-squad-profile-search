@@ -6,7 +6,7 @@ export default function Masthead({ totalSelected, matchCount, totalCompanies, to
           <img src='/logo.png' alt='NM Squad' style={{ width: 80, height: 80, borderRadius: '50%', flexShrink: 0 }} />
           <div>
             <h1 style={{ fontFamily: 'Playfair Display', fontSize: 52, fontWeight: 900, color: '#1a1a1a', lineHeight: 1.05, letterSpacing: '-0.02em' }}>
-              Profile Building Search
+              Profile Builder
             </h1>
             <p style={{ fontFamily: 'Playfair Display', fontSize: 26, fontWeight: 700, fontStyle: 'italic', color: '#8B1A1A', marginTop: 2 }}>
               By NM Squad

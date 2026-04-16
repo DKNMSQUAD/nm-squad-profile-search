@@ -29,11 +29,6 @@ export default function CompanyCard({ company, criteria, selectedCriteria }) {
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
             <h3 style={{ fontFamily: 'Playfair Display', fontSize: 18, fontWeight: 800, color: '#1a1a1a', lineHeight: 1.2 }}>{company.name}</h3>
-            {hasSelected && company.score > 0 && (
-              <span style={{ fontFamily: 'IBM Plex Mono', fontSize: 10, fontWeight: 700, letterSpacing: '0.06em', color: scoreColor, border: '1px solid ' + scoreColor, padding: '2px 8px', borderRadius: 2, flexShrink: 0 }}>
-                {company.score}% MATCH
-              </span>
-            )}
           </div>
           {hasWebsite && (
             <span style={{ fontFamily: 'IBM Plex Mono', fontSize: 9, color: '#888', letterSpacing: '0.04em', display: 'block', marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
@@ -42,16 +37,6 @@ export default function CompanyCard({ company, criteria, selectedCriteria }) {
           )}
         </div>
       </div>
-      {hasSelected && company.score > 0 && (
-        <div style={{ margin: '10px 0' }}>
-          <div style={{ background: '#e8e0ce', borderRadius: 2, height: 4 }}>
-            <div style={{ background: scoreColor, height: '100%', width: company.score + '%', borderRadius: 2, transition: 'width 0.4s ease' }} />
-          </div>
-          <div style={{ fontFamily: 'IBM Plex Mono', fontSize: 10, color: '#888', marginTop: 4, letterSpacing: '0.04em' }}>
-            {company.matchCount} of {selectedCriteria.length} criteri{selectedCriteria.length > 1 ? 'a' : 'on'} matched
-          </div>
-        </div>
-      )}
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 10 }}>
         {matchedCriteria.map(t => (
           <span key={t.id} style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontFamily: 'IBM Plex Mono', fontSize: 9, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '3px 8px', borderRadius: 2, border: '1px solid ' + t.color, background: t.color + '18', color: t.color }}>
