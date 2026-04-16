@@ -1,6 +1,6 @@
 import CompanyCard from './CompanyCard'
 
-export default function CompanyGrid({ companies, criteria, results, selectedCriteria }) {
+export default function CompanyGrid({ companies, criteria, results, selectedCriteria, onPreview, activeCompanyId }) {
   const noSelection = selectedCriteria.length === 0
 
   if (!noSelection && results.length === 0) {
@@ -24,9 +24,16 @@ export default function CompanyGrid({ companies, criteria, results, selectedCrit
           {displayList.length} {noSelection ? 'AVAILABLE' : 'RESULTS'}
         </span>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 12 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 12 }}>
         {displayList.map(c => (
-          <CompanyCard key={c.id} company={c} criteria={criteria} selectedCriteria={selectedCriteria} />
+          <CompanyCard
+            key={c.id}
+            company={c}
+            criteria={criteria}
+            selectedCriteria={selectedCriteria}
+            onPreview={onPreview}
+            isActive={activeCompanyId === c.id}
+          />
         ))}
       </div>
     </div>
